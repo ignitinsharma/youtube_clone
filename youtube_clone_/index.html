@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+    <style>
+        #searchresults{
+            margin: auto;
+            width: 80%;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(auto);
+            gap: 20px 20px;
+        
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="search">
+    <button onclick="mainfun()" >Search</button>
+    
+    <!-- all data appended here -->
+    <div id="searchresults">
+    </div>
+    
+</body>
+</html>
+<script src="./index.js"></script>
