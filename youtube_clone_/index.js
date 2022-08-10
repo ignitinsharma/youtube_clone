@@ -4,7 +4,7 @@
 //--> On click event  on search bar
 //--> then fetch api
 //--> append data
-let key="AIzaSyByEYlxvDyS-M062hZBR40gTjdLAjb520M";
+let key="AIzaSyDCqkrXPTm06qxLAhWJrkI5mXwR73BW2BU";
 
 let container = document.getElementById("searchresults");
 
@@ -16,7 +16,7 @@ let mainfun = async () => {
     let search = document.getElementById("search").value;
 
     let apidata = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippet&maxResults=32`
+      `https://youtube.googleapis.com/youtube/v3/search?q=${search}&key=${key}&part=snippet&maxResults=20`
     );
 
     let { items } = await apidata.json(); //--> destructing item= data.item
@@ -33,7 +33,8 @@ let mainfun_default = async () => {
   try {
 
     let apidata = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&key=${key}&maxResults=20`
+     
+      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&key=${key}&part=snippet&maxResults=20`
     );
 
     let { items } = await apidata.json(); //--> destructing item= data.item
